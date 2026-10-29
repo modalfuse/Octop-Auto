@@ -235,6 +235,8 @@ curl -fsSL https://finnie-1258344699.cos.ap-guangzhou.myqcloud.com/octop/install
 
 桌面客户端说明见 [desktop/README.md](desktop/README.md)，飞牛打包指南见 [fnos/README.md](fnos/README.md)。
 
+连接远程 Octop 的 Flutter macOS 客户端（不替代上面的 Wails 安装包）见 [clients/flutter_mac/README.md](clients/flutter_mac/README.md)。
+
 **备选 — PyPI**（若你已自行管理 Python 环境）：
 
 ```bash
