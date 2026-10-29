@@ -1,0 +1,198 @@
+/* Octop patch: 项目空间 sidebar group */
+#octop-project-space {
+  margin: 0 0 6px;
+  padding: 0;
+  flex-shrink: 0;
+}
+#octop-project-space .ops-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  color: var(--fn-text-secondary, #4b5563);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--fn-radius-md, 8px);
+}
+#octop-project-space .ops-header:hover {
+  background: var(--fn-sidebar-item-hover, rgba(0,0,0,.04));
+}
+#octop-project-space .ops-chevron {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  opacity: .55;
+  transition: transform .18s ease;
+}
+#octop-project-space.is-collapsed .ops-chevron {
+  transform: rotate(-90deg);
+}
+#octop-project-space .ops-body {
+  padding: 0 2px 4px;
+}
+#octop-project-space.is-collapsed .ops-body {
+  display: none;
+}
+#octop-project-space .ops-new {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 2px 0 6px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 999px;
+  background: var(--fn-bg-muted, #f3f4f6);
+  color: var(--fn-text-primary, #111827);
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: left;
+}
+#octop-project-space .ops-new:hover {
+  filter: brightness(0.97);
+}
+#octop-project-space .ops-new-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--fn-text-primary, #111827);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+}
+#octop-project-space .ops-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#octop-project-space .ops-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+  border-radius: var(--fn-radius-md, 8px);
+}
+#octop-project-space .ops-item-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  color: var(--fn-text-secondary, #4b5563);
+  font-size: 14px;
+  border-radius: var(--fn-radius-md, 8px);
+}
+#octop-project-space .ops-item-main:hover {
+  background: var(--fn-sidebar-item-hover, rgba(0,0,0,.04));
+}
+#octop-project-space .ops-item.is-active .ops-item-main {
+  background: var(--fn-sidebar-item-active-bg, #fce7f3);
+  color: var(--fn-sidebar-item-active-text, #be185d);
+  font-weight: 500;
+}
+#octop-project-space .ops-item-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  opacity: .7;
+}
+#octop-project-space .ops-item-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#octop-project-space .ops-item-del {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--fn-text-tertiary, #9ca3af);
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0;
+}
+#octop-project-space .ops-item:hover .ops-item-del {
+  opacity: 1;
+}
+#octop-project-space .ops-item-del:hover {
+  color: #dc2626;
+  background: rgba(220,38,38,.08);
+}
+#octop-project-space .ops-empty {
+  padding: 4px 10px 8px;
+  font-size: 12px;
+  color: var(--fn-text-tertiary, #9ca3af);
+}
+#octop-project-space .ops-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,42,.35);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+#octop-project-space-dialog {
+  width: min(360px, 100%);
+  background: var(--fn-bg-elevated, #fff);
+  color: var(--fn-text-primary, #111827);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.18);
+  padding: 18px 18px 14px;
+}
+#octop-project-space-dialog h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+#octop-project-space-dialog input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid var(--fn-border-primary, #e5e7eb);
+  border-radius: 8px;
+  font-size: 14px;
+  background: var(--fn-bg, #fff);
+  color: inherit;
+}
+#octop-project-space-dialog .ops-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+#octop-project-space-dialog button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+#octop-project-space-dialog .ops-cancel {
+  background: transparent;
+  color: var(--fn-text-secondary, #4b5563);
+}
+#octop-project-space-dialog .ops-ok {
+  background: var(--fn-sidebar-item-active-text, #be185d);
+  color: #fff;
+}
