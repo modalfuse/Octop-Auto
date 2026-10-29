@@ -84,9 +84,10 @@ docs/requirements-flutter-mac-desktop-v1.0-20261029.md  # 本文档
 
 ## 8. 实现状态
 
-- [ ] Flutter macOS 工程骨架
-- [ ] 设置 / Base URL / 安全存储登录
-- [ ] 对话 MVP（main）
-- [ ] 项目空间侧栏（本地或 API）
-- [ ] analyze / test / macos build
-- [ ] hp02 联调记录
+- [x] Flutter macOS 工程骨架（`clients/flutter_mac/`）
+- [x] 设置 / Base URL / 安全存储登录（钥匙串 entitlement 已写入 macOS runner）
+- [x] 对话 MVP（main，WebSocket `token` 帧）
+- [x] 项目空间侧栏（本机存储：新建、选择、删除、折叠）
+- [x] analyze / test：云端 Ubuntu x86_64、Flutter 3.47.8。`flutter analyze` 无 issue，`flutter test` 13 passed
+- [ ] macos build：Linux 上的 Flutter 没有 `flutter build macos` 子命令，需在 Mac 上执行（命令见 `clients/flutter_mac/README.md`）
+- [ ] hp02 联调记录：云端未连 Tailscale。Mac 上先 `curl -sS http://100.101.163.69:8088/api/health`，再在窗口登录并向 main 发一条消息（密码不要进入命令或日志）

@@ -6,6 +6,9 @@
 
 ## [Unreleased]
 
+### 新增
+- Flutter macOS 客户端（`clients/flutter_mac/`）连接远程 Octop 服务。登录令牌放在钥匙串，不替代 Wails 桌面端
+
 ## [1.0.3b1] - 2026-10-25
 
 ### 新增
